@@ -9,4 +9,4 @@ for out in range(1, row_size+1):
             print(" ", end="")
     print_control_x += 1
     print_control_y -= 1
-    print("\r")
+    print("\r") 
