@@ -1,4 +1,4 @@
-row_size = int(input("Enter the     row size:"))
+row_size = int(input("Enter the   row size:"))
 print_control_x = 1
 print_control_y = row_size*2-1
 for out in range(1, row_size+1):
