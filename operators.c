@@ -94,7 +94,8 @@ int main()
 { 
 	// integer variable 
 	int num = 10; 
-	int * add_of_num = #
+	int * add_of_num = 
+	// # in line 97 
 
 	printf("sizeof(num) = %d bytes\n", sizeof(num)); 
 	printf("&num = %p\n", &num); 
