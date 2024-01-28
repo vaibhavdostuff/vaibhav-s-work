@@ -577,3 +577,4 @@ int main()
   printArr(a, n);  
 } 
  
+//10
