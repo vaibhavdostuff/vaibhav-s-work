@@ -237,7 +237,7 @@ int main() {
 
 /* Returns an array of size 256 containing count
 of characters in the passed char array */
-int* getCharCountArray(char* str)
+	int* getCharCountArray(char* str)
 {
 	int* count = (int*)calloc(sizeof(int), NO_OF_CHARS);
 	int i;
@@ -280,3 +280,26 @@ int main()
 	getchar();
 	return 0;
 }
+
+//7
+// C program for splitting a string 
+// using strtok() 
+#include <stdio.h> 
+#include <string.h> 
+
+int main() 
+{ 
+	char str[] = "Geeks-for-Geeks"; 
+
+	// Returns first token 
+	char* token = strtok(str, "-"); 
+
+	// Keep printing tokens while one of the 
+	// delimiters present in str[]. 
+	while (token != NULL) { 
+		printf("%s", token); 
+		token = strtok(NULL, "-"); 
+	} 
+
+	return 0; 
+} 
