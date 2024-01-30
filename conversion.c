@@ -155,3 +155,15 @@ int main()
 
 	return 0;
 }
+
+//7
+#include <stdlib.h>
+#include <stdio.h>
+int main()
+{
+	long l;
+	char *str;
+	str = "349639 geeksforgeeks";
+	l = atol(str); 
+printf("l = %.ld\n",l);
+}
