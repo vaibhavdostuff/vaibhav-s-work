@@ -167,3 +167,17 @@ int main()
 	l = atol(str); 
 printf("l = %.ld\n",l);
 }
+
+//8
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+int main()
+{
+	long i = 1234;
+	char buffer[100];
+
+	ltoa(i, buffer, 10);
+	printf("string is %s\n", buffer);
+	return 0;
+}
