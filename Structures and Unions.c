@@ -360,3 +360,11 @@ struct student {
 	int struct_size;
 	char stud_name[];
 };
+
+//8
+struct student {
+	int stud_id;
+	int name_len;
+	int struct_size;
+	char stud_name[6]; // character array of length 6
+};
