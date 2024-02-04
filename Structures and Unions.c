@@ -444,3 +444,25 @@ int main()
 
 	return 0;
 }
+
+//10
+// C program to print the month by month 
+// calendar for the given year 
+
+#include <stdio.h> 
+
+// Function that returns the index of the 
+// day for date DD/MM/YYYY 
+int dayNumber(int day, int month, int year) 
+{ 
+
+	static int t[] = { 0, 3, 2, 5, 0, 3, 
+					5, 1, 4, 6, 2, 4 }; 
+	year -= month < 3; 
+	return (year + year / 4 
+			- year / 100 
+			+ year / 400 
+			+ t[month - 1] + day) 
+		% 7; 
+} 
+
