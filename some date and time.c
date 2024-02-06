@@ -338,3 +338,33 @@ int main()
 		ptime->tm_sec);
 	return 0;
 }
+
+//9
+// C++ program to illustrate the 
+// gmtime() function 
+#include <stdio.h> 
+#include <time.h> 
+#define UTC (0) 
+#define ART (-3) 
+
+int main() 
+{ 
+	// object
+	time_t current_time;
+	
+	// pointer
+	struct tm* ptime; 
+	
+	// use time function
+	time(¤t_time); 
+
+	// print the current time
+	ptime = gmtime(¤t_time); 
+	printf("Current time:\n"); 
+	printf("Monrovia ( Liberia ) :%2d:%02d:%02d\n", 
+		(ptime->tm_hour + UTC) % 24, ptime->tm_min, ptime->tm_sec); 
+
+	printf("Buenos Aires ( Argentina ) :%2d:%02d:%02d\n", 
+		(ptime->tm_hour + ART) % 24, ptime->tm_min, ptime->tm_sec); 
+	return 0; 
+} 
