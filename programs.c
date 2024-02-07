@@ -9,3 +9,15 @@ int main()
 	printf("%d", s);
 	return 0;
 }
+
+//2
+// C program to demonstrate
+// an error occurred by dividing 0
+#include <stdio.h>
+
+int main()
+{
+	int a = 5;
+	printf("%d", a / 0);
+	return 0;
+}
