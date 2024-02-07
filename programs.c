@@ -33,3 +33,15 @@ int main()
 	GFG[10] = 10;
 	return 0;
 }
+
+//4
+// C program to demonstrate
+// an error of large memory allocation
+#include <stdio.h>
+
+int main()
+{
+	int GFG[10000000000];
+	printf("%d", GFG);
+	return 0;
+}
