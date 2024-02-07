@@ -84,3 +84,16 @@ int main()
 printf("Geeks for Geeks");
 return 0;
 }
+
+//8
+// C program to demonstrate
+// a runtime error
+#include <stdio.h>
+
+// Driver code 
+int main() 
+{
+int array[5];
+printf("%d", array[10]);
+return 0;
+}
