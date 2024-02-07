@@ -71,3 +71,16 @@ int main()
 printf("Geeks for geeks!") 
 return 0;
 }
+
+//7
+// C program to demonstrate
+// a syntax error due to
+// missing parenthesis
+#include <stdio.h>
+
+// Driver code
+int main() 
+
+printf("Geeks for Geeks");
+return 0;
+}
