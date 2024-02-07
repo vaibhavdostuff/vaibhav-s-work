@@ -45,3 +45,15 @@ int main()
 	printf("%d", GFG);
 	return 0;
 }
+
+//5
+// C program to demonstrate
+// a common error
+#include <stdio.h>
+
+int main()
+{
+	long int GFG;
+	scanf("%d", &GFG);
+	return 0;
+}
