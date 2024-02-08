@@ -97,3 +97,20 @@ int array[5];
 printf("%d", array[10]);
 return 0;
 }
+
+//9
+// C program to demonstrate
+// a logical error
+#include <stdio.h>
+
+// Driver code
+int main() 
+{
+int i; 
+for(i = 0; i <= 5; i++); 
+{
+	printf("Geeks for Geeks");
+}
+	return 0;
+}
+
