@@ -215,3 +215,24 @@ if (X > 5)
 } 
 return 0; 
 }
+
+//16
+// C program to show the 
+// unreachable error 
+#include <stdio.h> 
+
+// Driver code 
+int main() 
+{ 
+// The value of N is 3 
+int N = 2 + 1; 
+	
+// 3==4 false so it will not be 
+// entered inside the if statement 
+if (N == 4) 
+{ 
+	/* unreachable code */
+	printf("equal"); 
+} 
+return 0; 
+}
