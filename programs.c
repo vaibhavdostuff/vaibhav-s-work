@@ -192,3 +192,26 @@ for (int i = 0; i < 5; i++)
 } 
 return 0; 
 } 
+
+//15
+// C program to show the 
+// unreachable error 
+#include <math.h> 
+#include <stdio.h> 
+
+// Driver code 
+int main() 
+{ 
+// The value of sqrt(2) is 1.414 
+double X = sqrt(2); 
+	
+// 1.414>5 condition false so it 
+// will not be entered inside the 
+// if statement 
+if (X > 5) 
+{ 
+	/* unreachable code */
+	X++; 
+} 
+return 0; 
+}
