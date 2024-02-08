@@ -126,3 +126,18 @@ printf("Geeks for Geeks");
 return 0;
 }
 
+//11
+// C program to demonstrate
+// a semantic error
+#include <stdio.h>
+
+// Driver code
+int main() 
+{
+int x = 10;
+	b = 20, c; 
+x + y = c;
+printf("%d", c);
+	return 0;
+}
+
