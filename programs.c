@@ -176,3 +176,19 @@ for (;;)
 } 
 return 0; 
 }
+
+//14
+// C program to implement 
+// the above approach 
+#include <stdio.h> 
+
+// Driver code 
+int main() 
+{ 
+for (int i = 0; i < 5; i++) 
+{ 
+	continue; 
+	printf("GeeksforGeeks"); 
+} 
+return 0; 
+} 
