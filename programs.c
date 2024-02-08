@@ -153,3 +153,26 @@ int main()
 	return 0; 
 	printf("gfg"); 
 } 
+
+//13
+// C program to implement 
+// the above approach 
+#include <stdio.h> 
+
+// Driver code 
+int main() 
+{ 
+int a = 2; 
+for (;;) 
+{ 
+	if (a == 2) 
+	{ 
+	break; 
+		
+	// It will never execute, so 
+	// same error will be there. 
+	printf("GeeksforGeeks"); 
+	} 
+} 
+return 0; 
+}
