@@ -114,3 +114,15 @@ for(i = 0; i <= 5; i++);
 	return 0;
 }
 
+//10
+// C program to demonstrate
+// a linker error
+#include <stdio.h>
+
+// Driver code
+int Main() 
+{
+printf("Geeks for Geeks");
+return 0;
+}
+
