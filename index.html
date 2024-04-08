@@ -195,3 +195,21 @@ def index():
 @app.route('/send_alert', methods=['POST'])
 def send_alert():
     if request.method == 'POST':
+    user_location = request.form['location']
+    emergency_contacts = ["family_member1@example.com", "family_member2@example.com"]
+    nearest_police_station = "nearest_police_station@example.com"
+
+    # Simulating the process of sending location data to emergency contacts and the nearest police station
+    send_email(emergency_contacts, "Emergency Alert", f"The user is in danger at location: {user_location}")
+    send_email(nearest_police_station, "Emergency Alert", f"The user is in danger at location: {user_location}")
+
+    return 'Alert sent! Help is on the way.'
+
+def send_email(recipient, subject, body):
+# Simulate sending email (Replace this with actual email sending code)
+print(f"Email sent to: {recipient}\nSubject: {subject}\nBody: {body}")
+
+if __name__ == '__main__':
+app.run(debug=True)
+
+#14
