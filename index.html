@@ -163,3 +163,25 @@ This is Computer Science portal for geeks.
             let userLocation = "Latitude: 37.7749, Longitude: -122.4194"; // Sample location data
             let emergencyContacts = ["family_member1@example.com", "family_member2@example.com"]; // Sample email addresses
 
+            // Send location to emergency contacts
+            for (let i = 0; i < emergencyContacts.length; i++) {
+                sendEmail(emergencyContacts[i], "Emergency Alert", "The user is in danger at location: " + userLocation);
+            }
+
+            // Send location to the nearest police station
+            sendEmail("nearest_police_station@example.com", "Emergency Alert", "The user is in danger at location: " + userLocation);
+            
+            alert("Alert sent! Help is on the way.");
+        }
+
+        function sendEmail(email, subject, body) {
+            // Code to send email using a server-side script or email API
+            // This requires server-side implementation which is not possible in this context
+            console.log("Email sent to: " + email + "\nSubject: " + subject + "\nBody: " + body);
+        }
+    </script>
+</body>
+</html>
+
+#13
+
