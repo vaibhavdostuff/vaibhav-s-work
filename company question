@@ -8,3 +8,15 @@ from sklearn.metrics import classification_report, accuracy_score
 from tensorflow.keras.models import Model
 from tensorflow.keras.layers import Input, Dense
 from tensorflow.keras.optimizers import Adam
+
+# Step 1: Load and preprocess the market data
+# Assume df contains features relevant to market prediction and a column indicating whether the market increased by 50 points in 13 minutes
+# Example DataFrame creation for demonstration
+np.random.seed(42)
+df = pd.DataFrame({
+    'feature1': np.random.rand(1000),
+    'feature2': np.random.rand(1000),
+    'feature3': np.random.rand(1000),
+    'price_change': np.random.rand(1000) * 100  # Example of price change data
+})
+
