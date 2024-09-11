@@ -20,3 +20,11 @@ df = pd.DataFrame({
     'price_change': np.random.rand(1000) * 100  # Example of price change data
 })
 
+# Creating the target: whether the market increased by 50 points in 13 minutes (binary classification)
+# Example target definition; in practice, calculate based on actual market data.
+df['target'] = (df['price_change'] >= 50).astype(int)
+
+# Split into features and targets
+X = df[['feature1', 'feature2', 'feature3']]  # Replace with your actual features
+y = df['target']  # Binary target
+
