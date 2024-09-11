@@ -36,3 +36,10 @@ scaler = StandardScaler()
 X_train_scaled = scaler.fit_transform(X_train)
 X_test_scaled = scaler.transform(X_test)
 
+# Step 2: Build a Binary Classification Neural Network Model
+input_layer = Input(shape=(X_train_scaled.shape[1],))
+
+# Neural network layers
+x = Dense(64, activation='relu')(input_layer)
+x = Dense(32, activation='relu')(x)
+
