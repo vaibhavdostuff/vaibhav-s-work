@@ -28,3 +28,11 @@ df['target'] = (df['price_change'] >= 50).astype(int)
 X = df[['feature1', 'feature2', 'feature3']]  # Replace with your actual features
 y = df['target']  # Binary target
 
+# Train-test split
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Scale the features
+scaler = StandardScaler()
+X_train_scaled = scaler.fit_transform(X_train)
+X_test_scaled = scaler.transform(X_test)
+
