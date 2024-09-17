@@ -1,3 +1,5 @@
+#ML MODALS
+
 #Logistic Regression Example:
 #1
 from sklearn.datasets import load_iris
@@ -20,4 +22,11 @@ model.fit(X_train, y_train)
 # Predict and evaluate
 y_pred = model.predict(X_test)
 print("Accuracy:", accuracy_score(y_test, y_pred))
+
+#Support Vector Machine (SVM) Example:
+#2
+from sklearn.datasets import load_iris
+from sklearn.model_selection import train_test_split
+from sklearn.svm import SVC
+from sklearn.metrics import classification_report
 
