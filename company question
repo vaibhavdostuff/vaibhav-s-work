@@ -119,3 +119,6 @@ def gradient_descent(x, y, learning_rate=0.01, iterations=1000):
 
     return m, b
 
+#7
+#NumPy arrays , useful in AI/ML?
+import numpy as np
