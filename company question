@@ -104,3 +104,10 @@ def train_model(data):
 
 train_model([i for i in range(100000)])
 
+#6
+#gradient descent in Python?
+def gradient_descent(x, y, learning_rate=0.01, iterations=1000):
+    m, b = 0, 0  # Initial guess for the slope and intercept
+    n = len(x)   # Number of samples
+
+    
