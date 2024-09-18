@@ -130,3 +130,11 @@ array = np.array([1, 2, 3, 4, 5])
 array_plus_two = array + 2
 print(array_plus_two)
 
+#8
+#argmax() and max() in NumPy?
+import numpy as np
+
+arr = np.array([0.1, 0.4, 0.7, 0.2])
+print(np.max(arr))       # Output: 0.7 (Maximum value)
+print(np.argmax(arr))    # Output: 2 (Index of maximum value)
+
