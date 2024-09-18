@@ -110,4 +110,12 @@ def gradient_descent(x, y, learning_rate=0.01, iterations=1000):
     m, b = 0, 0  # Initial guess for the slope and intercept
     n = len(x)   # Number of samples
 
-    
+    for _ in range(iterations):
+        y_pred = m * x + b  # Prediction
+        dm = (-2/n) * sum(x * (y - y_pred))  # Gradient w.r.t m
+        db = (-2/n) * sum(y - y_pred)        # Gradient w.r.t b
+        m -= learning_rate * dm  # Update m
+        b -= learning_rate * db  # Update b
+
+    return m, b
+
