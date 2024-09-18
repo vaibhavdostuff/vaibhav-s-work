@@ -142,3 +142,13 @@ print(np.argmax(arr))    # Output: 2 (Index of maximum value)
 #handle missing data in a dataset using Python?
 import pandas as pd
 
+# Creating a sample dataframe
+df = pd.DataFrame({
+    'A': [1, 2, None, 4],
+    'B': [5, None, 7, 8]
+})
+
+# Impute missing values with the column mean
+df.fillna(df.mean(), inplace=True)
+print(df)
+
