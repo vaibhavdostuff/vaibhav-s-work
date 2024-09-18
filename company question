@@ -138,3 +138,7 @@ arr = np.array([0.1, 0.4, 0.7, 0.2])
 print(np.max(arr))       # Output: 0.7 (Maximum value)
 print(np.argmax(arr))    # Output: 2 (Index of maximum value)
 
+#9
+#handle missing data in a dataset using Python?
+import pandas as pd
+
