@@ -63,3 +63,12 @@ y_pred_classes = (y_pred > 0.5).astype(int)  # Threshold of 0.5 for binary class
 print(classification_report(y_test, y_pred_classes))
 print(f'Accuracy: {accuracy_score(y_test, y_pred_classes)}')
 
+#2
+#Write a Python program to find the factorial of a number using recursion.
+
+def factorial(n):
+    if n == 1:
+        return 1
+    else:
+        return n * factorial(n-1)
+
