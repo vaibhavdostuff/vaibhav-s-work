@@ -72,3 +72,11 @@ def factorial(n):
     else:
         return n * factorial(n-1)
 
+#3
+#Write a Python program that reads a file, counts the number of lines, and prints the result.
+
+def count_lines(filename):
+    with open(filename, 'r') as file:
+        lines = file.readlines()
+        print("Number of lines:", len(lines))
+
