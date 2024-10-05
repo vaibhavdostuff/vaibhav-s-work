@@ -2,6 +2,12 @@ import nltk
 from nltk.corpus import wordnet
 from transformers import T5ForConditionalGeneration, T5Tokenizer
 
+
+# Download WordNet if not already done
+# nltk.download('wordnet')
+# nltk.download('omw-1.4')
+
+
 # Synonym generator function
 def get_synonyms(word):
     synonyms = []
