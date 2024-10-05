@@ -31,3 +31,10 @@ label {
     font-weight: bold;
 }
 
+textarea {
+    resize: none;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
