@@ -7,3 +7,10 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
+    <div class="container">
+        <h1>Sentence Paraphraser</h1>
+        <form method="POST" action="/process">
+            <label for="text">Enter a sentence:</label>
+            <textarea id="text" name="text" rows="4" placeholder="Type your sentence here..." required></textarea>
+            <button type="submit">Paraphrase</button>
+        </form>
