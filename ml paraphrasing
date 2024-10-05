@@ -29,3 +29,10 @@ def rephrase_sentence(sentence):
     paraphrased_sentence = tokenizer.decode(outputs[0], skip_special_tokens=True)
     return paraphrased_sentence
 
+# Main function to process user input
+def process_input(text):
+    words = text.split()
+    synonyms_list = {word: get_synonyms(word) for word in words}
+    rephrased_text = rephrase_sentence(text)
+    return synonyms_list, rephrased_text
+
