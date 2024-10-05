@@ -36,3 +36,11 @@ def process_input(text):
     rephrased_text = rephrase_sentence(text)
     return synonyms_list, rephrased_text
 
+# Example usage
+input_text = "The quick brown fox jumps over the lazy dog."
+synonyms_list, rephrased_text = process_input(input_text)
+
+print("Input Sentence:", input_text)
+print("Synonyms for each word:", synonyms_list)
+print("Rephrased Sentence:", rephrased_text)
+
