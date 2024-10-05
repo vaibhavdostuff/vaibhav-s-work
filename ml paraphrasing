@@ -2,3 +2,10 @@ import nltk
 from nltk.corpus import wordnet
 from transformers import T5ForConditionalGeneration, T5Tokenizer
 
+# Synonym generator function
+def get_synonyms(word):
+    synonyms = []
+    for syn in wordnet.synsets(word):
+        for lemma in syn.lemmas():
+            synonyms.append(lemma.name())
+    return set(synonyms)
