@@ -1,6 +1,5 @@
-from flask import Flask, request, jsonify, render_template
+from flask import Flask, request, render_template
 from transformers import T5ForConditionalGeneration, T5Tokenizer
-import torch
 
 app = Flask(__name__)
 
@@ -37,4 +36,3 @@ def process():
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8000, debug=True)
-
