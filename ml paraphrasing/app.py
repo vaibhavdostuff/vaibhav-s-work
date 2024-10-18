@@ -16,3 +16,10 @@ similarity_tokenizer = AutoTokenizer.from_pretrained(similarity_model_name)
 similarity_model = AutoModelForSequenceClassification.from_pretrained(similarity_model_name)
 similarity_classes = ["not paraphrase", "is paraphrase"]
 
+# Load translation models and tokenizers
+translation_models = {
+    "en": MarianMTModel.from_pretrained("Helsinki-NLP/opus-mt-en-ROMANCE"),
+    "fr": MarianMTModel.from_pretrained("Helsinki-NLP/opus-mt-fr-en"),
+    "es": MarianMTModel.from_pretrained("Helsinki-NLP/opus-mt-es-en"),
+    "hi": MarianMTModel.from_pretrained("Helsinki-NLP/opus-mt-hi-en"),
+}
