@@ -30,3 +30,9 @@ translation_tokenizers = {
     "es": MarianTokenizer.from_pretrained("Helsinki-NLP/opus-mt-es-en"),
     "hi": MarianTokenizer.from_pretrained("Helsinki-NLP/opus-mt-hi-en"),
 }
+
+def paraphrase_sentence(input_sentence, max_length=60, num_beams=7):
+    input_text = f"paraphrase: {input_sentence} </s>"
+    input_ids = paraphrase_tokenizer.encode(input_text, return_tensors="pt", max_length=128, truncation=True)
+
+    with torch.no_grad():
