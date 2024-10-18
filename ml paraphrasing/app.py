@@ -85,7 +85,14 @@ def paraphrase():
 
     if not input_sentence:
         return render_template('result.html', original="", paraphrased=["Please enter a sentence."], similarities=[])
-
+    
     try:
         # Get paraphrased sentences
         paraphrased_sentences = paraphrase_sentence(input_sentence)
+
+        # Calculate similarity for each paraphrased sentence
+        similarities = []
+        for paraphrased in paraphrased_sentences:
+            similarity_result = classify_similarity(input_sentence, paraphrased)
+            similarity_percentage = similarity_result["is paraphrase"]
+            similarities.append(f"{similarity_percentage}%")
