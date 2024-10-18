@@ -63,4 +63,12 @@ def translate_text(text, source_lang, target_lang):
     if source_lang == target_lang:
         return text
     
-    
+    tokenizer = translation_tokenizers.get(target_lang)
+    model = translation_models.get(target_lang)
+    if tokenizer and model:
+        inputs = tokenizer(text, return_tensors="pt", padding=True, truncation=True)
+        with torch.no_grad():
+            translated_tokens = model.generate(**inputs)
+        translated_text = tokenizer.decode(translated_tokens[0], skip_special_tokens=True)
+        return translated_text
+    return text
