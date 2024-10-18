@@ -23,3 +23,10 @@ translation_models = {
     "es": MarianMTModel.from_pretrained("Helsinki-NLP/opus-mt-es-en"),
     "hi": MarianMTModel.from_pretrained("Helsinki-NLP/opus-mt-hi-en"),
 }
+
+translation_tokenizers = {
+    "en": MarianTokenizer.from_pretrained("Helsinki-NLP/opus-mt-en-ROMANCE"),
+    "fr": MarianTokenizer.from_pretrained("Helsinki-NLP/opus-mt-fr-en"),
+    "es": MarianTokenizer.from_pretrained("Helsinki-NLP/opus-mt-es-en"),
+    "hi": MarianTokenizer.from_pretrained("Helsinki-NLP/opus-mt-hi-en"),
+}
