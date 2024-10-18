@@ -44,3 +44,10 @@ def paraphrase_sentence(input_sentence, max_length=60, num_beams=7):
             early_stopping=True,
             temperature=1.2  # Lower temperature for more controlled outputs
         )
+    
+    paraphrased_sentences = [paraphrase_tokenizer.decode(output, skip_special_tokens=True) for output in outputs]
+
+    # Auto-correct and filter out non-English sentences
+    corrected_sentences = [str(TextBlob(sentence).correct()) for sentence in paraphrased_sentences if sentence]
+
+    return corrected_sentences[:2]
