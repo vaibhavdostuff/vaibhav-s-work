@@ -96,3 +96,8 @@ def paraphrase():
             similarity_result = classify_similarity(input_sentence, paraphrased)
             similarity_percentage = similarity_result["is paraphrase"]
             similarities.append(f"{similarity_percentage}%")
+
+        # Translate if needed
+        if language != "en":
+            paraphrased_sentences = [translate_text(sentence, "en", language) for sentence in paraphrased_sentences]
+            input_sentence = translate_text(input_sentence, "en", language)
