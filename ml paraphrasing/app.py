@@ -105,3 +105,9 @@ def paraphrase():
     except Exception as e:
         paraphrased_sentences = [f"Error occurred: {str(e)}"]
         similarities = []
+
+    return render_template('result.html', original=input_sentence, paraphrased=paraphrased_sentences, similarities=similarities)
+
+if __name__ == '__main__':
+    app.run(debug=True)
+
