@@ -82,3 +82,10 @@ def home():
 def paraphrase():
     input_sentence = request.form.get('sentence', '').strip()
     language = request.form.get('language', 'en')
+
+    if not input_sentence:
+        return render_template('result.html', original="", paraphrased=["Please enter a sentence."], similarities=[])
+
+    try:
+        # Get paraphrased sentences
+        paraphrased_sentences = paraphrase_sentence(input_sentence)
