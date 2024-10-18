@@ -58,3 +58,9 @@ def classify_similarity(sentence1, sentence2):
     paraphrase_results = torch.softmax(paraphrase_classification_logits, dim=1).tolist()[0]
     results = {similarity_classes[i]: int(round(paraphrase_results[i] * 100)) for i in range(len(similarity_classes))}
     return results
+
+def translate_text(text, source_lang, target_lang):
+    if source_lang == target_lang:
+        return text
+    
+    
