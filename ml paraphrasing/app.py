@@ -51,3 +51,10 @@ def paraphrase_sentence(input_sentence, max_length=60, num_beams=7):
     corrected_sentences = [str(TextBlob(sentence).correct()) for sentence in paraphrased_sentences if sentence]
 
     return corrected_sentences[:2]
+
+def classify_similarity(sentence1, sentence2):
+    paraphrase = similarity_tokenizer(sentence1, sentence2, return_tensors="pt")
+    paraphrase_classification_logits = similarity_model(**paraphrase).logits
+    paraphrase_results = torch.softmax(paraphrase_classification_logits, dim=1).tolist()[0]
+    results = {similarity_classes[i]: int(round(paraphrase_results[i] * 100)) for i in range(len(similarity_classes))}
+    return results
