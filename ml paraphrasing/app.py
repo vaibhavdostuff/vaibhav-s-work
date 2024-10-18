@@ -72,3 +72,13 @@ def translate_text(text, source_lang, target_lang):
         translated_text = tokenizer.decode(translated_tokens[0], skip_special_tokens=True)
         return translated_text
     return text
+
+
+@app.route('/')
+def home():
+    return render_template('index.html')
+
+@app.route('/paraphrase', methods=['POST'])
+def paraphrase():
+    input_sentence = request.form.get('sentence', '').strip()
+    language = request.form.get('language', 'en')
