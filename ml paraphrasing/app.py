@@ -36,3 +36,11 @@ def paraphrase_sentence(input_sentence, max_length=60, num_beams=7):
     input_ids = paraphrase_tokenizer.encode(input_text, return_tensors="pt", max_length=128, truncation=True)
 
     with torch.no_grad():
+        outputs = paraphrase_model.generate(
+            input_ids,
+            max_length=max_length,
+            num_beams=num_beams,
+            num_return_sequences=2,
+            early_stopping=True,
+            temperature=1.2  # Lower temperature for more controlled outputs
+        )
