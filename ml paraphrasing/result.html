@@ -19,4 +19,10 @@
                     <li>{{ paraphrase }}</li>
                 {% endfor %}
             </ul>
-            
+
+            <h2>Similarity Scores:</h2>
+            <ul>
+                {% for similarity in similarities %}
+                    <li>{{ similarity }}</li>
+                {% endfor %}
+            </ul>
