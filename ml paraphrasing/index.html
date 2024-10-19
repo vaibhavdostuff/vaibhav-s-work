@@ -5,3 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Paraphrasing Tool</title>
     <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Paraphrasing Tool</h1>
+        <form action="/paraphrase" method="POST">
+            <label for="sentence">Enter a sentence:</label>
+            <textarea id="sentence" name="sentence" rows="4" cols="50" placeholder="Type your sentence here..." required></textarea>
+            
