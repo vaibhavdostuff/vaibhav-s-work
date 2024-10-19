@@ -12,3 +12,11 @@
         <div class="result-section">
             <h2>Original Sentence:</h2>
             <p>{{ original }}</p>
+
+            <h2>Paraphrased Sentences:</h2>
+            <ul>
+                {% for paraphrase in paraphrased %}
+                    <li>{{ paraphrase }}</li>
+                {% endfor %}
+            </ul>
+            
