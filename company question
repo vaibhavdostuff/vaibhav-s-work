@@ -163,3 +163,13 @@ def reverse_string(s):
 input_string = "Hello"
 print(f"Reversed string: {reverse_string(input_string)}")
 
+# 11
+# Remove Duplicates from a List
+
+def remove_duplicates(lst):
+    return list(set(lst))
+
+# Test the function
+numbers = [1, 2, 2, 3, 4, 4, 5]
+print(f"List after removing duplicates: {remove_duplicates(numbers)}")
+
