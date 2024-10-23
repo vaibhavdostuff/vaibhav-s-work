@@ -1,3 +1,4 @@
+# 1
 #the question was to predict that the market will increase by 50 points in the next 13 minutes
 
 import numpy as np
@@ -63,7 +64,7 @@ y_pred_classes = (y_pred > 0.5).astype(int)  # Threshold of 0.5 for binary class
 print(classification_report(y_test, y_pred_classes))
 print(f'Accuracy: {accuracy_score(y_test, y_pred_classes)}')
 
-#2
+# 2
 #Write a Python program to find the factorial of a number using recursion.
 
 def factorial(n):
@@ -72,7 +73,7 @@ def factorial(n):
     else:
         return n * factorial(n-1)
 
-#3
+# 3
 #Write a Python program that reads a file, counts the number of lines, and prints the result.
 
 def count_lines(filename):
@@ -80,12 +81,12 @@ def count_lines(filename):
         lines = file.readlines()
         print("Number of lines:", len(lines))
 
-#4
+# 4
 #Write a single line Python code to print all the prime numbers between 1 and 200.
 
 print([x for x in range(2, 201) if all(x % i != 0 for i in range(2, int(x**0.5) + 1))])
 
-#5
+# 5
 #Python decorators, and how are they used in AI/ML?
 def timer(func):
     import time
@@ -104,7 +105,7 @@ def train_model(data):
 
 train_model([i for i in range(100000)])
 
-#6
+# 6
 #gradient descent in Python?
 def gradient_descent(x, y, learning_rate=0.01, iterations=1000):
     m, b = 0, 0  # Initial guess for the slope and intercept
@@ -119,7 +120,7 @@ def gradient_descent(x, y, learning_rate=0.01, iterations=1000):
 
     return m, b
 
-#7
+# 7
 #NumPy arrays , useful in AI/ML?
 import numpy as np
 
@@ -130,7 +131,7 @@ array = np.array([1, 2, 3, 4, 5])
 array_plus_two = array + 2
 print(array_plus_two)
 
-#8
+# 8
 #argmax() and max() in NumPy?
 import numpy as np
 
@@ -138,7 +139,7 @@ arr = np.array([0.1, 0.4, 0.7, 0.2])
 print(np.max(arr))       # Output: 0.7 (Maximum value)
 print(np.argmax(arr))    # Output: 2 (Index of maximum value)
 
-#9
+# 9
 #handle missing data in a dataset using Python?
 import pandas as pd
 
@@ -152,3 +153,5 @@ df = pd.DataFrame({
 df.fillna(df.mean(), inplace=True)
 print(df)
 
+ # 10
+ 
