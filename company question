@@ -173,3 +173,14 @@ def remove_duplicates(lst):
 numbers = [1, 2, 2, 3, 4, 4, 5]
 print(f"List after removing duplicates: {remove_duplicates(numbers)}")
 
+# 12
+# Find the Intersection of Two Lists
+
+def list_intersection(list1, list2):
+    return list(set(list1) & set(list2))
+
+# Test the function
+list1 = [1, 2, 3, 4, 5]
+list2 = [3, 4, 5, 6, 7]
+print(f"Intersection: {list_intersection(list1, list2)}")
+
