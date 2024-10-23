@@ -207,3 +207,11 @@ def count_frequency(lst):
 items = ['apple', 'banana', 'apple', 'orange', 'banana', 'apple']
 print(f"Frequency count: {count_frequency(items)}")
 
+# 15
+# Flatten a Nested List
+
+def flatten_list(nested_list):
+    flat_list = []
+    for item in nested_list:
+        if isinstance(item, list):
+            flat_list.extend(flatten_list(item))
