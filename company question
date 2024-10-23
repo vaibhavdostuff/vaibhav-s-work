@@ -184,3 +184,14 @@ list1 = [1, 2, 3, 4, 5]
 list2 = [3, 4, 5, 6, 7]
 print(f"Intersection: {list_intersection(list1, list2)}")
 
+# 13
+# Create a Dictionary from Two Lists
+
+def lists_to_dict(keys, values):
+    return dict(zip(keys, values))
+
+# Test the function
+keys = ['Name', 'Age', 'City']
+values = ['Alice', 30, 'New York']
+print(f"Dictionary: {lists_to_dict(keys, values)}")
+
