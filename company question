@@ -195,3 +195,15 @@ keys = ['Name', 'Age', 'City']
 values = ['Alice', 30, 'New York']
 print(f"Dictionary: {lists_to_dict(keys, values)}")
 
+# 14
+# Count the Frequency of Elements in a List
+
+from collections import Counter
+
+def count_frequency(lst):
+    return Counter(lst)
+
+# Test the function
+items = ['apple', 'banana', 'apple', 'orange', 'banana', 'apple']
+print(f"Frequency count: {count_frequency(items)}")
+
