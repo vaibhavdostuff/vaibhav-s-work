@@ -21,3 +21,22 @@ export default function ChatInterface() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ message: input }),
       })
+
+      
+      const data = await response.json()
+      const botMessage = { text: data.response, sender: "bot" }
+      setMessages((prevMessages) => [...prevMessages, botMessage])
+    } catch (error) {
+      console.error("Error sending message:", error)
+    }
+  }
+
+  return (
+    <div className="w-full md:w-1/2 flex flex-col h-[500px]">
+      <h2 className="text-2xl font-semibold mb-4">Chat</h2>
+      <div className="flex-1 overflow-y-auto mb-4 border rounded p-4">
+        {messages.map((message, index) => (
+          <div key={index} className={`mb-2 ${message.sender === "user" ? "text-right" : "text-left"}`}>
+            <span
+              className={`inline-block p-2 rounded ${message.sender === "user" ? "bg-blue-500 text-white" : "bg-gray-200"}`}
+            ></span>
