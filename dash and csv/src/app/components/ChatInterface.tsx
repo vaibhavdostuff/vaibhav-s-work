@@ -39,4 +39,22 @@ export default function ChatInterface() {
           <div key={index} className={`mb-2 ${message.sender === "user" ? "text-right" : "text-left"}`}>
             <span
               className={`inline-block p-2 rounded ${message.sender === "user" ? "bg-blue-500 text-white" : "bg-gray-200"}`}
-            ></span>
+            >
+              {message.text}
+            </span>
+          </div>
+        ))}
+      </div>
+      <div className="flex">
+        <Input
+          type="text"
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
+          placeholder="Ask a question..."
+          className="flex-1 mr-2"
+        />
+        <Button onClick={sendMessage}>Send</Button>
+      </div>
+    </div>
+  )
+}
